@@ -15,6 +15,7 @@
   --blue:#4da8ff;
   --green:#6ee7b7;
   --purple:#b388ff;
+  --orange:#ffb347;
   --dark:#1a1a1a;
 }
 
@@ -29,6 +30,28 @@ body{
   background:#fffdf7;
   color:var(--dark);
   overflow-x:hidden;
+  cursor:none; /* hide default cursor */
+}
+
+/* CUSTOM CURSOR DOODLE */
+.cursor{
+  position:fixed;
+  top:0;
+  left:0;
+  width:32px;
+  height:32px;
+  pointer-events:none;
+  background:var(--pink);
+  border:3px solid black;
+  border-radius:50%;
+  transform:translate(-50%, -50%) rotate(-15deg);
+  animation: bounce 0.3s infinite alternate;
+  z-index:10000;
+}
+
+@keyframes bounce{
+  0%{transform:translate(-50%, -50%) rotate(-15deg) scale(1);}
+  100%{transform:translate(-50%, -50%) rotate(-5deg) scale(1.2);}
 }
 
 /* DOODLE BACKGROUND */
@@ -48,10 +71,12 @@ body{
   animation: float 12s infinite ease-in-out;
 }
 
-.d1{width:120px;height:120px;background:var(--pink);top:10%;left:5%;}
-.d2{width:180px;height:180px;background:var(--blue);top:60%;left:80%;}
-.d3{width:90px;height:90px;background:var(--yellow);top:75%;left:15%;}
-.d4{width:140px;height:140px;background:var(--green);top:20%;left:70%;}
+.d1{width:120px;height:120px;background:var(--pink);top:10%;left:5%; animation-delay:0s;}
+.d2{width:180px;height:180px;background:var(--blue);top:60%;left:80%; animation-delay:2s;}
+.d3{width:90px;height:90px;background:var(--yellow);top:75%;left:15%; animation-delay:4s;}
+.d4{width:140px;height:140px;background:var(--green);top:20%;left:70%; animation-delay:1s;}
+.d5{width:100px;height:100px;background:var(--orange);top:40%;left:50%; animation-delay:3s;}
+.d6{width:70px;height:70px;background:var(--purple);top:30%;left:30%; animation-delay:5s;}
 
 @keyframes float{
   0%,100%{transform:translateY(0px) rotate(0deg);}
@@ -66,16 +91,19 @@ nav{
   padding:25px 8%;
 }
 
-.logo{
-  font-family:'Patrick Hand',cursive;
-  font-size:32px;
-  border:3px solid black;
-  padding:8px 18px;
-  background:var(--yellow);
-  transform:rotate(-2deg);
-  box-shadow:4px 4px 0 #000;
+.logo-placeholder{
+  width:150px;
+  height:50px;
+  border:3px dashed #000;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-family:'Patrick Hand', cursive;
+  font-size:18px;
+  color:#888;
 }
 
+/* NAV LINKS */
 nav ul{
   display:flex;
   gap:25px;
@@ -233,10 +261,14 @@ footer{
   <div class="doodle d2"></div>
   <div class="doodle d3"></div>
   <div class="doodle d4"></div>
+  <div class="doodle d5"></div>
+  <div class="doodle d6"></div>
 </div>
 
+<div class="cursor"></div>
+
 <nav>
-  <div class="logo">DX Atelier</div>
+  <img src="images/dxlogo.png" alt="DX Atelier Logo" class="logo">
   <ul>
     <li><a href="#">Home</a></li>
     <li><a href="#">Works</a></li>
@@ -279,6 +311,15 @@ footer{
 <footer>
   © 2026 DX Atelier — Crafted Playfully
 </footer>
+
+<script>
+// Follow mouse for doodle cursor
+const cursor = document.querySelector('.cursor');
+document.addEventListener('mousemove', e => {
+  cursor.style.top = e.clientY + 'px';
+  cursor.style.left = e.clientX + 'px';
+});
+</script>
 
 </body>
 </html>
