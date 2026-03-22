@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DX Atelier — Creative Developer</title>
+
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --pink:#ff7eb6;
+  --yellow:#ffd93d;
+  --blue:#4da8ff;
+  --green:#6ee7b7;
+  --purple:#b388ff;
+  --dark:#1a1a1a;
+}
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+body{
+  font-family:'Poppins',sans-serif;
+  background:#fffdf7;
+  color:var(--dark);
+  overflow-x:hidden;
+}
+
+/* DOODLE BACKGROUND */
+.bg-doodle{
+  position:fixed;
+  width:100%;
+  height:100%;
+  z-index:-1;
+  overflow:hidden;
+}
+
+.doodle{
+  position:absolute;
+  border:3px solid #000;
+  border-radius:50%;
+  opacity:0.15;
+  animation: float 12s infinite ease-in-out;
+}
+
+.d1{width:120px;height:120px;background:var(--pink);top:10%;left:5%;}
+.d2{width:180px;height:180px;background:var(--blue);top:60%;left:80%;}
+.d3{width:90px;height:90px;background:var(--yellow);top:75%;left:15%;}
+.d4{width:140px;height:140px;background:var(--green);top:20%;left:70%;}
+
+@keyframes float{
+  0%,100%{transform:translateY(0px) rotate(0deg);}
+  50%{transform:translateY(-30px) rotate(15deg);}
+}
+
+/* NAVBAR */
+nav{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:25px 8%;
+}
+
+.logo{
+  font-family:'Patrick Hand',cursive;
+  font-size:32px;
+  border:3px solid black;
+  padding:8px 18px;
+  background:var(--yellow);
+  transform:rotate(-2deg);
+  box-shadow:4px 4px 0 #000;
+}
+
+nav ul{
+  display:flex;
+  gap:25px;
+  list-style:none;
+}
+
+nav a{
+  text-decoration:none;
+  color:black;
+  font-weight:500;
+  position:relative;
+}
+
+nav a::after{
+  content:'';
+  position:absolute;
+  width:0%;
+  height:3px;
+  background:black;
+  left:0;
+  bottom:-6px;
+  transition:0.3s;
+}
+
+nav a:hover::after{width:100%;}
+
+/* HERO */
+.hero{
+  padding:80px 8%;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  flex-wrap:wrap;
+}
+
+.hero-text{
+  max-width:520px;
+}
+
+.hero h1{
+  font-size:54px;
+  font-weight:700;
+  margin-bottom:15px;
+}
+
+.highlight{
+  background:var(--pink);
+  padding:0 12px;
+  border:3px solid black;
+  box-shadow:5px 5px 0 black;
+  display:inline-block;
+  transform:rotate(-2deg);
+}
+
+.hero p{
+  margin:25px 0;
+  line-height:1.7;
+}
+
+/* DOODLE BUTTONS */
+.btn{
+  display:inline-block;
+  padding:14px 28px;
+  margin-right:15px;
+  border-radius:50px;
+  border:3px solid black;
+  font-weight:600;
+  text-decoration:none;
+  color:black;
+  box-shadow:4px 4px 0 black;
+  transition:0.2s;
+}
+
+.btn-primary{background:var(--blue);}
+.btn-secondary{background:var(--green);}
+
+.btn:hover{
+  transform:translateY(-5px) rotate(-2deg);
+  box-shadow:8px 8px 0 black;
+}
+
+/* HERO IMAGE DOODLE FRAME */
+.hero-img{
+  width:360px;
+  height:360px;
+  background:var(--purple);
+  border:4px solid black;
+  border-radius:40% 60% 55% 45% / 60% 40% 60% 40%;
+  box-shadow:8px 8px 0 black;
+  animation: blob 8s infinite ease-in-out;
+}
+
+@keyframes blob{
+  0%,100%{border-radius:40% 60% 55% 45% / 60% 40% 60% 40%;}
+  50%{border-radius:60% 40% 40% 60% / 50% 60% 40% 50%;}
+}
+
+/* SECTION */
+.section{
+  padding:100px 8%;
+  text-align:center;
+}
+
+.section h2{
+  font-family:'Patrick Hand',cursive;
+  font-size:42px;
+  margin-bottom:50px;
+}
+
+/* PORTFOLIO CARDS */
+.cards{
+  display:flex;
+  gap:40px;
+  justify-content:center;
+  flex-wrap:wrap;
+}
+
+.card{
+  width:260px;
+  padding:25px;
+  background:white;
+  border:3px solid black;
+  box-shadow:6px 6px 0 black;
+  transform:rotate(-2deg);
+  transition:0.25s;
+}
+
+.card:nth-child(2){transform:rotate(2deg);}
+.card:nth-child(3){transform:rotate(-1deg);}
+
+.card:hover{
+  transform:translateY(-10px) rotate(0deg) scale(1.05);
+}
+
+.card-thumb{
+  height:140px;
+  background:var(--yellow);
+  margin-bottom:18px;
+  border:3px solid black;
+}
+
+/* FOOTER */
+footer{
+  padding:40px;
+  text-align:center;
+  font-size:14px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="bg-doodle">
+  <div class="doodle d1"></div>
+  <div class="doodle d2"></div>
+  <div class="doodle d3"></div>
+  <div class="doodle d4"></div>
+</div>
+
+<nav>
+  <div class="logo">DX Atelier</div>
+  <ul>
+    <li><a href="#">Home</a></li>
+    <li><a href="#">Works</a></li>
+    <li><a href="#">About</a></li>
+    <li><a href="#">Contact</a></li>
+  </ul>
+</nav>
+
+<section class="hero">
+  <div class="hero-text">
+    <h1><span class="highlight">Creative</span><br>Frontend Developer</h1>
+    <p>I build playful, engaging digital experiences for brands, creators, and growing businesses.</p>
+    <a href="#" class="btn btn-primary">See Works</a>
+    <a href="#" class="btn btn-secondary">Contact Me</a>
+  </div>
+  <div class="hero-img"></div>
+</section>
+
+<section class="section">
+  <h2>Selected Works</h2>
+  <div class="cards">
+    <div class="card">
+      <div class="card-thumb"></div>
+      <h3>UMKM Website</h3>
+      <p>Playful brand site</p>
+    </div>
+    <div class="card">
+      <div class="card-thumb"></div>
+      <h3>Creator Portfolio</h3>
+      <p>Personal branding</p>
+    </div>
+    <div class="card">
+      <div class="card-thumb"></div>
+      <h3>Event Landing Page</h3>
+      <p>Interactive campaign</p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  © 2026 DX Atelier — Crafted Playfully
+</footer>
+
+</body>
+</html>
