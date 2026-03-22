@@ -253,6 +253,88 @@ footer{
     font-size:38px;
   }
 }
+
+/* =========================
+   📱 RESPONSIVE FIX ONLY
+   ========================= */
+
+@media (max-width: 1024px){
+  .hero{
+    gap:40px;
+  }
+}
+
+@media (max-width: 768px){
+
+  nav{
+    flex-direction:column;
+    gap:15px;
+  }
+
+  nav ul{
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:15px;
+  }
+
+  .hero{
+    flex-direction:column;
+    text-align:center;
+    padding:60px 6%;
+  }
+
+  .hero-text{
+    max-width:100%;
+  }
+
+  .hero h1{
+    font-size:36px;
+  }
+
+  .hero p{
+    font-size:14px;
+  }
+
+  .hero-img{
+    width:260px;
+    height:260px;
+  }
+
+  .btn{
+    margin:10px 8px;
+  }
+
+  .section{
+    padding:70px 6%;
+  }
+
+  .cards{
+    gap:25px;
+  }
+
+  .card{
+    width:100%;
+    max-width:320px;
+  }
+
+}
+
+@media (max-width: 480px){
+
+  .hero h1{
+    font-size:30px;
+  }
+
+  .hero-img{
+    width:220px;
+    height:220px;
+  }
+
+  .section h2{
+    font-size:32px;
+  }
+
+}
 </style>
 </head>
 
