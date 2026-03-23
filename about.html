@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tentang — DX Atelier</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;600&family=Kalam&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Baloo 2', cursive;
+      background: #fff;
+      color: #111;
+      overflow-x: hidden;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: auto;
+      padding: 40px 20px;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 40px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .brand img {
+      width: 45px;
+    }
+
+    .tagline {
+      font-size: 12px;
+      opacity: 0.6;
+    }
+
+    .hero {
+      font-size: 34px;
+      line-height: 1.3;
+      margin-bottom: 20px;
+    }
+
+    .hero span {
+      background: #fde047;
+      padding: 4px 10px;
+      border-radius: 10px;
+    }
+
+    .card {
+      border: 2px dashed #000;
+      border-radius: 20px;
+      padding: 25px;
+      transform: rotate(-0.5deg);
+      transition: 0.3s;
+    }
+
+    .card:hover {
+      transform: rotate(0deg) scale(1.02);
+    }
+
+    p {
+      line-height: 1.7;
+      margin-bottom: 15px;
+    }
+
+    .highlight {
+      display: inline-block;
+      background: #67e8f9;
+      padding: 3px 8px;
+      border-radius: 8px;
+    }
+
+    .doodle {
+      position: absolute;
+      font-family: 'Kalam', cursive;
+      opacity: 0.6;
+      font-size: 14px;
+    }
+
+    .d1 { top: 120px; left: 20px; }
+    .d2 { bottom: 100px; right: 20px; }
+
+    footer {
+      text-align: center;
+      margin-top: 80px;
+      font-size: 12px;
+      opacity: 0.6;
+    }
+
+  </style>
+</head>
+
+<body>
+
+<div class="container">
+
+  <header>
+    <div class="brand">
+      <img src="dxlogo.png">
+      <div>
+        <strong>DX Atelier</strong><br>
+        <span class="tagline">art in every pixel</span>
+      </div>
+    </div>
+  </header>
+
+  <div class="hero">
+    aku bukan cuma bikin website.<br>
+    <span>aku bikin pengalaman.</span>
+  </div>
+
+  <div class="doodle d1">~ campur aduk ide di sini ~</div>
+
+  <div class="card">
+    <h2>tentang aku👀</h2>
+
+    <p>
+      "kalau bisa milih banyak hobi, kenapa cuma milih satu?"
+    </p>
+
+    <p>
+      aku suka desain. aku suka nulis. aku juga suka ngoding.
+    </p>
+
+    <p>
+      dan daripada milih salah satu…
+      <br>
+      <b>“kenapa gak digabung aja?”</b>
+    </p>
+
+    <p>
+      akhirnya lahirlah <span class="highlight">DX Atelier</span> — tempat di mana semua itu ketemu.
+    </p>
+
+    <p>
+      di sini, aku gak cuma bikin website yang kelihatan bagus.
+      <br><br>
+      tapi juga punya cerita.
+      <br>
+      punya rasa.
+    </p>
+
+    <p>
+      aku suka sesuatu yang unik.
+      yang gak pasaran.
+      yang bikin orang mikir:
+      <br>
+      <b>“ini beda.”</b>
+    </p>
+
+    <p>
+      jadi kalau kamu cari website yang cuma "rapi"…
+      no, no, yaaa... mungkin aku bukan orangnya.
+      <br><br>
+      tapi kalau kamu mau sesuatu yang hidup,
+      yang punya karakter,
+      dan berasa “kamu banget” —
+      <br>
+      yuk ngobrol yuk!
+    </p>
+
+  </div>
+
+  <div class="doodle d2">* bukan template * ini cerita *</div>
+
+  <footer>
+    © <span id="year"></span> DX Atelier. All rights reserved.
+  </footer>
+
+</div>
+
+<script>
+  document.getElementById("year").innerText = new Date().getFullYear();
+</script>
+
+</body>
+</html>
