@@ -1,226 +1,176 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>UMKM Project — DX Atelier</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DX Archive — Portfolio UMKM</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;600&family=Kalam&display=swap" rel="stylesheet">
 
-<style>
-:root{
-  --pink:#ff7eb6;
-  --yellow:#ffd93d;
-  --blue:#4da8ff;
-  --green:#6ee7b7;
-  --purple:#b388ff;
-  --dark:#1a1a1a;
-}
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Baloo 2', cursive;
+      background: #fff;
+      color: #111;
+    }
 
-*{margin:0;padding:0;box-sizing:border-box;}
+    .container {
+      max-width: 900px;
+      margin: auto;
+      padding: 40px 20px;
+    }
 
-body{
-  font-family:'Poppins',sans-serif;
-  background:#fffdf7;
-  color:var(--dark);
-}
+    header {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 40px;
+    }
 
-/* NAV */
-nav{
-  padding:20px 8%;
-}
+    header img {
+      width: 45px;
+    }
 
-.back{
-  text-decoration:none;
-  border:3px solid black;
-  padding:10px 18px;
-  background:var(--yellow);
-  box-shadow:4px 4px 0 black;
-  display:inline-block;
-}
+    .tagline {
+      font-size: 12px;
+      opacity: 0.6;
+    }
 
-/* HERO */
-.hero{
-  padding:80px 8%;
-  text-align:center;
-}
+    .hero {
+      font-size: 34px;
+      line-height: 1.3;
+      margin-bottom: 20px;
+    }
 
-.hero h1{
-  font-size:48px;
-  margin-bottom:20px;
-}
+    .hero span {
+      background: #fde047;
+      padding: 4px 10px;
+      border-radius: 10px;
+    }
 
-.tag{
-  display:inline-block;
-  padding:6px 12px;
-  border:2px solid black;
-  background:var(--pink);
-  margin-bottom:20px;
-}
+    .sub {
+      font-size: 15px;
+      opacity: 0.8;
+      margin-bottom: 40px;
+      max-width: 500px;
+    }
 
-/* DESC */
-.desc{
-  max-width:700px;
-  margin:30px auto 10px;
-  line-height:1.8;
-}
+    .card {
+      border: 2px dashed #000;
+      border-radius: 20px;
+      padding: 25px;
+      margin-bottom: 25px;
+      transform: rotate(-0.5deg);
+      transition: 0.3s;
+    }
 
-/* 🔥 PREVIEW WEBSITE */
-.preview{
-  max-width:700px;
-  margin:60px auto;
-  border:4px solid black;
-  box-shadow:8px 8px 0 black;
-  background:white;
-  border-radius:10px;
-  overflow:hidden;
-}
+    .card:hover {
+      transform: rotate(0deg) scale(1.02);
+    }
 
-/* browser bar */
-.browser-bar{
-  display:flex;
-  gap:8px;
-  padding:10px;
-  border-bottom:3px solid black;
-  background:#fff;
-}
+    .project {
+      margin-top: 15px;
+      padding: 15px;
+      border: 2px solid #000;
+      border-radius: 15px;
+      background: #f9f9f9;
+      transition: 0.25s;
+    }
 
-.browser-bar span{
-  width:12px;
-  height:12px;
-  border-radius:50%;
-  border:2px solid black;
-  background:var(--pink);
-}
+    .project:hover {
+      background: #fff7ff;
+      transform: translateY(-5px);
+    }
 
-.browser-bar span:nth-child(2){background:var(--yellow);}
-.browser-bar span:nth-child(3){background:var(--green);}
+    .tag {
+      font-size: 11px;
+      background: #67e8f9;
+      padding: 3px 8px;
+      border-radius: 8px;
+      display: inline-block;
+      margin-bottom: 5px;
+    }
 
-/* isi web */
-.web-content{
-  padding:20px;
-}
+    .btn {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 8px 12px;
+      background: #000;
+      color: #fff;
+      border-radius: 10px;
+      text-decoration: none;
+      font-size: 14px;
+    }
 
-/* fake navbar */
-.web-nav{
-  font-weight:700;
-  margin-bottom:20px;
-  border-bottom:2px dashed black;
-  padding-bottom:8px;
-}
+    .btn:hover {
+      background: #f9a8d4;
+      color: #000;
+    }
 
-/* hero fake */
-.web-hero h2{
-  font-size:22px;
-  margin-bottom:10px;
-}
+    .doodle {
+      font-family: 'Kalam', cursive;
+      font-size: 14px;
+      opacity: 0.6;
+      margin-bottom: 10px;
+    }
 
-.web-hero p{
-  font-size:14px;
-  margin-bottom:15px;
-}
+    footer {
+      text-align: center;
+      margin-top: 60px;
+      font-size: 12px;
+      opacity: 0.6;
+    }
 
-.web-hero button{
-  padding:8px 16px;
-  border:2px solid black;
-  background:var(--blue);
-  cursor:pointer;
-  box-shadow:3px 3px 0 black;
-}
-
-/* FEATURES */
-.features{
-  margin-top:60px;
-  display:flex;
-  gap:30px;
-  flex-wrap:wrap;
-  justify-content:center;
-}
-
-.feature{
-  width:220px;
-  padding:20px;
-  background:white;
-  border:3px solid black;
-  box-shadow:5px 5px 0 black;
-  transform:rotate(-2deg);
-}
-
-.feature:nth-child(2){transform:rotate(2deg);}
-
-/* FOOTER */
-footer{
-  margin-top:80px;
-  padding:40px;
-  text-align:center;
-}
-
-/* 📱 MOBILE */
-@media(max-width:768px){
-  .hero h1{
-    font-size:34px;
-  }
-
-  .mockup{
-    height:260px;
-  }
-
-  .preview{
-    margin:40px 10px;
-  }
-
-  .feature{
-    width:100%;
-    max-width:280px;
-  }
-}
-</style>
+  </style>
 </head>
 
 <body>
 
-<nav>
-  <a href="index.html" class="back">← Back</a>
-</nav>
+<div class="container">
 
-<section class="hero">
-  <div class="tag">UMKM Project</div>
-  <h1>Website for Local Brand</h1>
+  <header>
+    <img src="dxlogo.png">
+    <div>
+      <strong>DX Atelier</strong><br>
+      <span class="tagline">art in every pixel</span>
+    </div>
+  </header>
 
-  <div class="desc">
+  <div class="hero">
+    ini bukan sekadar portfolio.<br>
+    <span>ini cerita brand kecil.</span>
+  </div>
+
+  <div class="sub">
+    DX Archive adalah kumpulan buku-buku dan tulisan karya DX yang bisa kamu nikmatin secara gratis.
+  </div>
+
+  <div class="card">
+    <div class="doodle">~ project pertama selalu spesial ~</div>
+
+    <h2>DX Archive</h2>
     <p>
-      Website ini dirancang untuk membantu UMKM tampil lebih menarik secara digital.
-      Dengan pendekatan visual yang playful dan engaging, brand menjadi lebih dekat dengan audiensnya.
+      a digital sanctuary of words.
     </p>
-  </div>
 
-  <!-- 🔥 PREVIEW WEBSITE -->
-  <div class="preview">
-    <div class="browser-bar">
-      <span></span><span></span><span></span>
-    </div>
-
-    <div class="web-content">
-      <div class="web-nav">KopiKita ☕</div>
-
-      <div class="web-hero">
-        <h2>Kopi Lokal, Rasa Global</h2>
-        <p>Nikmati kopi terbaik langsung dari petani Indonesia.</p>
-        <button>Beli Sekarang</button>
-      </div>
+    <div class="project">
+      <span class="tag">UMKM</span>
+      <p>
+        penasaran gak?
+      </p>
+      <a class="btn" href="#">cek dulu</a>
     </div>
   </div>
+  <footer>
+    © <span id="year"></span> DX Atelier. All rights reserved.
+  </footer>
 
-  <div class="features">
-    <div class="feature">🎨 Fun & Colorful UI</div>
-    <div class="feature">📱 Mobile Friendly</div>
-    <div class="feature">⚡ Fast Loading</div>
-  </div>
-</section>
+</div>
 
-<footer>
-   © 2026 DX Atelier — Crafted Playfully
-</footer>
+<script>
+  document.getElementById("year").innerText = new Date().getFullYear();
+</script>
 
 </body>
 </html>
