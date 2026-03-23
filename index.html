@@ -1,408 +1,222 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>DX Atelier — Creative Developer</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DX Atelier</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;600&display=swap" rel="stylesheet">
 
-<style>
-:root{
-  --pink:#ff7eb6;
-  --yellow:#ffd93d;
-  --blue:#4da8ff;
-  --green:#6ee7b7;
-  --purple:#b388ff;
-  --dark:#1a1a1a;
-}
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Baloo 2', cursive;
+      background: #fff;
+      overflow-x: hidden;
+    }
 
-*{margin:0;padding:0;box-sizing:border-box;}
+    .container {
+      max-width: 900px;
+      margin: auto;
+      padding: 40px 20px;
+    }
 
-body{
-  font-family:'Poppins',sans-serif;
-  background:#fffdf7;
-  color:var(--dark);
-  overflow-x:hidden;
-}
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
 
-/* BACKGROUND */
-.bg-doodle{
-  position:fixed;
-  width:100%;
-  height:100%;
-  z-index:-1;
-}
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
 
-.doodle{
-  position:absolute;
-  border:3px solid #000;
-  border-radius:50%;
-  opacity:0.15;
-  animation: float 12s infinite ease-in-out;
-}
+    .brand img {
+      width: 50px;
+    }
 
-.d1{width:120px;height:120px;background:var(--pink);top:10%;left:5%;}
-.d2{width:180px;height:180px;background:var(--blue);top:60%;left:80%;}
-.d3{width:90px;height:90px;background:var(--yellow);top:75%;left:15%;}
-.d4{width:140px;height:140px;background:var(--green);top:20%;left:70%;}
+    .tagline {
+      font-size: 12px;
+      opacity: 0.6;
+    }
 
-@keyframes float{
-  0%,100%{transform:translateY(0px) rotate(0deg);}
-  50%{transform:translateY(-30px) rotate(15deg);}
-}
+    section {
+      margin-top: 60px;
+      position: relative;
+    }
 
-/* NAVBAR */
-nav{
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  padding:20px 8%;
-}
+    h2 {
+      font-size: 28px;
+      margin-bottom: 10px;
+    }
 
-/* LOGO */
-.logo{
-  display:flex;
-  align-items:center;
-  justify-content:center;
-}
+    p {
+      line-height: 1.6;
+    }
 
-.logo img{
-  height:52px;
-  width:52px;
-  object-fit:cover;
-  border-radius:50%;
+    /* doodle shapes */
+    .doodle {
+      position: absolute;
+      opacity: 0.6;
+      animation: float 6s infinite ease-in-out;
+    }
 
-  border:2px solid black;
-  padding:3px;
-  background:var(--yellow);
+    .d1 { top: -20px; left: -20px; }
+    .d2 { bottom: -20px; right: -20px; }
 
-  display:block;
+    @keyframes float {
+      0%,100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+    }
 
-  transform:rotate(-2deg);
-  box-shadow:3px 3px 0 #000;
+    /* fun cards */
+    .card {
+      border: 2px dashed #000;
+      padding: 20px;
+      border-radius: 20px;
+      background: #fff;
+      position: relative;
+      transform: rotate(-0.5deg);
+    }
 
-  animation: wiggleSoft 4s infinite ease-in-out;
-  transition:0.3s;
-}
+    .card:hover {
+      transform: rotate(0.5deg) scale(1.02);
+    }
 
-@keyframes wiggleSoft{
-  0%,100%{transform:rotate(-2deg);}
-  50%{transform:rotate(2deg);}
-}
+    /* portfolio */
+    .portfolio {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
 
-.logo img:hover{
-  transform:rotate(0deg) scale(1.08);
-  box-shadow:6px 6px 0 #000;
-}
+    .project {
+      background: #f9f9f9;
+      padding: 15px;
+      border-radius: 15px;
+      border: 2px solid #000;
+    }
 
-/* NAV MENU */
-nav ul{
-  display:flex;
-  gap:25px;
-  list-style:none;
-}
+    .project:hover {
+      background: #fff7ff;
+    }
 
-nav a{
-  text-decoration:none;
-  color:black;
-  font-weight:500;
-  position:relative;
-}
+    .btn {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 8px 12px;
+      background: #67e8f9;
+      border-radius: 10px;
+      text-decoration: none;
+      color: #000;
+    }
 
-nav a::after{
-  content:'';
-  position:absolute;
-  width:0%;
-  height:3px;
-  background:black;
-  left:0;
-  bottom:-6px;
-  transition:0.3s;
-}
+    .btn:hover {
+      background: #f9a8d4;
+    }
 
-nav a:hover::after{width:100%;}
+    iframe {
+      border-radius: 10px;
+    }
 
-/* HERO */
-.hero{
-  padding:80px 8%;
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  flex-wrap:wrap;
-}
+    footer {
+      text-align: center;
+      margin-top: 60px;
+      font-size: 12px;
+      opacity: 0.6;
+    }
 
-.hero-text{max-width:520px;}
-
-.hero h1{
-  font-size:54px;
-  font-weight:700;
-  margin-bottom:15px;
-}
-
-.highlight{
-  background:var(--pink);
-  padding:0 12px;
-  border:3px solid black;
-  box-shadow:5px 5px 0 black;
-  display:inline-block;
-  transform:rotate(-2deg);
-}
-
-.hero p{
-  margin:25px 0;
-  line-height:1.7;
-}
-
-/* BUTTON */
-.btn{
-  display:inline-block;
-  padding:14px 28px;
-  margin-right:15px;
-  border-radius:50px;
-  border:3px solid black;
-  font-weight:600;
-  text-decoration:none;
-  color:black;
-  box-shadow:4px 4px 0 black;
-  transition:0.2s;
-}
-
-.btn-primary{background:var(--blue);}
-.btn-secondary{background:var(--green);}
-
-.btn:hover{
-  transform:translateY(-5px) rotate(-2deg);
-  box-shadow:8px 8px 0 black;
-}
-
-/* HERO IMAGE */
-.hero-img{
-  width:360px;
-  height:360px;
-  background:var(--purple);
-  border:4px solid black;
-  border-radius:40% 60% 55% 45% / 60% 40% 60% 40%;
-  box-shadow:8px 8px 0 black;
-  animation: blob 8s infinite ease-in-out;
-}
-
-@keyframes blob{
-  0%,100%{border-radius:40% 60% 55% 45% / 60% 40% 60% 40%;}
-  50%{border-radius:60% 40% 40% 60% / 50% 60% 40% 50%;}
-}
-
-/* SECTION */
-.section{
-  padding:100px 8%;
-  text-align:center;
-}
-
-.section h2{
-  font-family:'Patrick Hand',cursive;
-  font-size:42px;
-  margin-bottom:50px;
-}
-
-/* CARDS */
-.cards{
-  display:flex;
-  gap:40px;
-  justify-content:center;
-  flex-wrap:wrap;
-}
-
-.card{
-  width:260px;
-  padding:25px;
-  background:white;
-  border:3px solid black;
-  box-shadow:6px 6px 0 black;
-  transform:rotate(-2deg);
-  transition:0.25s;
-}
-
-.card:nth-child(2){transform:rotate(2deg);}
-.card:nth-child(3){transform:rotate(-1deg);}
-
-.card:hover{
-  transform:translateY(-10px) rotate(0deg) scale(1.05);
-}
-
-.card-thumb{
-  height:140px;
-  background:var(--yellow);
-  margin-bottom:18px;
-  border:3px solid black;
-}
-
-/* FOOTER */
-footer{
-  padding:40px;
-  text-align:center;
-  font-size:14px;
-}
-
-/* MOBILE */
-@media(max-width:768px){
-  .logo img{
-    height:44px;
-    width:44px;
-  }
-  .hero h1{
-    font-size:38px;
-  }
-}
-
-/* =========================
-   📱 RESPONSIVE FIX ONLY
-   ========================= */
-
-@media (max-width: 1024px){
-  .hero{
-    gap:40px;
-  }
-}
-
-@media (max-width: 768px){
-
-  nav{
-    flex-direction:column;
-    gap:15px;
-  }
-
-  nav ul{
-    flex-wrap:wrap;
-    justify-content:center;
-    gap:15px;
-  }
-
-  .hero{
-    flex-direction:column;
-    text-align:center;
-    padding:60px 6%;
-  }
-
-  .hero-text{
-    max-width:100%;
-  }
-
-  .hero h1{
-    font-size:36px;
-  }
-
-  .hero p{
-    font-size:14px;
-  }
-
-  .hero-img{
-    width:260px;
-    height:260px;
-  }
-
-  .btn{
-    margin:10px 8px;
-  }
-
-  .section{
-    padding:70px 6%;
-  }
-
-  .cards{
-    gap:25px;
-  }
-
-  .card{
-    width:100%;
-    max-width:320px;
-  }
-
-}
-
-@media (max-width: 480px){
-
-  .hero h1{
-    font-size:30px;
-  }
-
-  .hero-img{
-    width:220px;
-    height:220px;
-  }
-
-  .section h2{
-    font-size:32px;
-  }
-  .card{
-  text-decoration:none;
-  color:inherit;
-  display:block;
-  }
-
-}
-</style>
+  </style>
 </head>
 
 <body>
 
-<div class="bg-doodle">
-  <div class="doodle d1"></div>
-  <div class="doodle d2"></div>
-  <div class="doodle d3"></div>
-  <div class="doodle d4"></div>
+<div class="container">
+
+  <header>
+    <div class="brand">
+      <img src="logo.png">
+      <div>
+        <strong>DX Atelier</strong><br>
+        <span class="tagline">art in every pixel</span>
+      </div>
+    </div>
+  </header>
+
+  <section>
+    <div class="doodle d1">🌈</div>
+    <div class="card">
+      <h2>Halo!!!</h2>
+      <p>
+        Aku kreator di balik DX Atelier. Aku bikin website yang seru, lucu, dan gak ngebosenin.
+        <br><br>
+        Fokusku bantu UMKM, kreator, dan startup kecil tampil beda lewat web yang punya karakter.
+      </p>
+    </div>
+  </section>
+
+  <section>
+    <div class="doodle d2">✨</div>
+    <div class="card">
+      <h2>Portfolio 🎨</h2>
+      <div class="portfolio">
+
+        <div class="project">
+          <strong>Website UMKM</strong>
+          <p>Design fun & colorful</p>
+          <a class="btn" href="#">Lihat</a>
+        </div>
+
+        <div class="project">
+          <strong>Landing Page Kreator</strong>
+          <p>Playful & expressive</p>
+          <a class="btn" href="#">Lihat</a>
+        </div>
+
+        <div class="project">
+          <strong>Startup Mini</strong>
+          <p>UI lucu tapi tetap clean</p>
+          <a class="btn" href="#">Lihat</a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="card">
+      <h2>DX Archive 📚</h2>
+      <p>Buku & karya tulisku yang bisa kamu nikmati 💛</p>
+      <a class="btn" href="#">Lihat</a>
+    </div>
+  </section>
+
+  <section>
+    <div class="card">
+      <h2>Playlist 🎧</h2>
+      <iframe src="https://open.spotify.com/embed/playlist/37i9dQZF1DXcBWIGoYBM5M" width="100%" height="80"></iframe>
+    </div>
+  </section>
+
+  <section>
+    <div class="card">
+      <h2>Kontak 💌</h2>
+      <p>Email: dxatelier.io@gmail.com</p>
+      <a class="btn" href="mailto:dxatelier.io@gmail.com">Ngobrol yuk</a>
+    </div>
+  </section>
+
+  <footer>
+    © <span id="year"></span> DX Atelier. All rights reserved.
+  </footer>
+
 </div>
 
-<nav>
-  <div class="logo">
-    <!-- 🔥 GANTI LINK LOGO DI SINI -->
-    <img src="dxlogo.png" alt="DX Atelier Logo">
-  </div>
-
-  <ul>
-    <li><a href="#">Home</a></li>
-    <li><a href="#">Works</a></li>
-    <li><a href="#">About</a></li>
-    <li><a href="#">Contact</a></li>
-  </ul>
-</nav>
-
-<section class="hero">
-  <div class="hero-text">
-    <h1><span class="highlight">Creative</span><br>Frontend Developer</h1>
-    <p>I build playful, engaging digital experiences for brands, creators, and growing businesses.</p>
-    <a href="#" class="btn btn-primary">See Works</a>
-    <a href="#" class="btn btn-secondary">Contact Me</a>
-  </div>
-  <div class="hero-img"></div>
-</section>
-
-<section class="section">
-  <h2>Selected Works</h2>
-  <div class="cards">
-    <div class="cards">
-  <a href="umkm.html" class="card">
-    <div class="card-thumb"></div>
-    <h3>UMKM Website</h3>
-    <p>Playful brand site</p>
-  </a>
-
-  <div class="card">
-    <div class="card-thumb"></div>
-    <h3>Creator Portfolio</h3>
-    <p>Personal branding</p>
-  </div>
-
-  <div class="card">
-    <div class="card-thumb"></div>
-    <h3>Event Landing Page</h3>
-    <p>Interactive campaign</p>
-  </div>
-</div>
-</section>
-
-<footer>
-  © 2026 DX Atelier — Crafted Playfully
-</footer>
+<script>
+  document.getElementById("year").innerText = new Date().getFullYear();
+</script>
 
 </body>
 </html>
