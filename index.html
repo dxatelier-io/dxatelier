@@ -13,6 +13,7 @@
       font-family: 'Baloo 2', cursive;
       background: #fff;
       overflow-x: hidden;
+      color: #111;
     }
 
     .container {
@@ -42,8 +43,28 @@
       opacity: 0.6;
     }
 
+    /* HERO */
+    .hero {
+      margin-top: 40px;
+      font-size: 36px;
+      line-height: 1.3;
+    }
+
+    .hero span {
+      background: #fde047;
+      padding: 4px 10px;
+      border-radius: 10px;
+    }
+
+    .subhero {
+      margin-top: 10px;
+      font-size: 15px;
+      opacity: 0.8;
+      max-width: 500px;
+    }
+
     section {
-      margin-top: 60px;
+      margin-top: 70px;
       position: relative;
     }
 
@@ -59,7 +80,8 @@
     /* doodle shapes */
     .doodle {
       position: absolute;
-      opacity: 0.6;
+      opacity: 0.5;
+      font-size: 20px;
       animation: float 6s infinite ease-in-out;
     }
 
@@ -68,21 +90,21 @@
 
     @keyframes float {
       0%,100% { transform: translateY(0); }
-      50% { transform: translateY(-10px); }
+      50% { transform: translateY(-12px); }
     }
 
     /* fun cards */
     .card {
       border: 2px dashed #000;
-      padding: 20px;
+      padding: 22px;
       border-radius: 20px;
       background: #fff;
-      position: relative;
       transform: rotate(-0.5deg);
+      transition: 0.3s;
     }
 
     .card:hover {
-      transform: rotate(0.5deg) scale(1.02);
+      transform: rotate(0deg) scale(1.03);
     }
 
     /* portfolio */
@@ -97,24 +119,38 @@
       padding: 15px;
       border-radius: 15px;
       border: 2px solid #000;
+      transition: 0.25s;
+      position: relative;
     }
 
     .project:hover {
       background: #fff7ff;
+      transform: translateY(-5px) rotate(0.5deg);
+    }
+
+    .tag {
+      font-size: 11px;
+      background: #67e8f9;
+      padding: 3px 8px;
+      border-radius: 8px;
+      display: inline-block;
+      margin-bottom: 5px;
     }
 
     .btn {
       display: inline-block;
       margin-top: 10px;
       padding: 8px 12px;
-      background: #67e8f9;
+      background: #000;
       border-radius: 10px;
       text-decoration: none;
-      color: #000;
+      color: #fff;
+      font-size: 14px;
     }
 
     .btn:hover {
       background: #f9a8d4;
+      color: #000;
     }
 
     iframe {
@@ -123,7 +159,7 @@
 
     footer {
       text-align: center;
-      margin-top: 60px;
+      margin-top: 80px;
       font-size: 12px;
       opacity: 0.6;
     }
@@ -145,18 +181,32 @@
     </div>
   </header>
 
+  <!-- HERO -->
+  <div class="hero">
+    website kamu harusnya gak ngebosenin.<br>
+    <span>harus punya rasa.</span>
+  </div>
+
+  <div class="subhero">
+    aku bantu brand kecil tampil beda lewat website yang seru, hidup, dan memorable.
+  </div>
+
+  <!-- ABOUT -->
   <section>
     <div class="doodle d1">🌈</div>
     <div class="card">
-      <h2>Halo!!!</h2>
+      <h2>Halo!!! 👋</h2>
       <p>
-        Aku kreator di balik DX Atelier. Aku bikin website yang seru, lucu, dan gak ngebosenin.
+        Aku kreator di balik DX Atelier.
         <br><br>
-        Fokusku bantu UMKM, kreator, dan startup kecil tampil beda lewat web yang punya karakter.
+        Aku gak bikin website biasa.
+        <br>
+        Aku bikin sesuatu yang bikin orang berhenti scroll.
       </p>
     </div>
   </section>
 
+  <!-- PORTFOLIO -->
   <section>
     <div class="doodle d2">✨</div>
     <div class="card">
@@ -164,42 +214,48 @@
       <div class="portfolio">
 
         <div class="project">
-          <strong>Website UMKM</strong>
-          <p>Design fun & colorful</p>
-          <a class="btn" href="#">Lihat</a>
+          <span class="tag">UMKM</span>
+          <strong>Kedai Kopi Sasuke</strong>
+          <p>Design fun & hangat</p>
+          <a class="btn" href="#">Lihat project</a>
         </div>
 
         <div class="project">
-          <strong>Landing Page Kreator</strong>
+          <span class="tag">Kreator</span>
+          <strong>Creator Landing</strong>
           <p>Playful & expressive</p>
-          <a class="btn" href="#">Lihat</a>
+          <a class="btn" href="#">Lihat project</a>
         </div>
 
         <div class="project">
-          <strong>Startup Mini</strong>
-          <p>UI lucu tapi tetap clean</p>
-          <a class="btn" href="#">Lihat</a>
+          <span class="tag">Startup</span>
+          <strong>Mini App</strong>
+          <p>Clean tapi tetap fun</p>
+          <a class="btn" href="#">Lihat project</a>
         </div>
 
       </div>
     </div>
   </section>
 
+  <!-- ARCHIVE -->
   <section>
     <div class="card">
       <h2>DX Archive 📚</h2>
-      <p>Buku & karya tulisku yang bisa kamu nikmati 💛</p>
-      <a class="btn" href="#">Lihat</a>
+      <p>kumpulan buku & karya tulis yang bisa kamu nikmati 💛</p>
+      <a class="btn" href="#">Lihat karya</a>
     </div>
   </section>
 
+  <!-- PLAYLIST -->
   <section>
     <div class="card">
-      <h2>Playlist Yang Nemenin Aku Ngedesain 🎧</h2>
+      <h2>Playlist 🎧</h2>
       <iframe src="https://open.spotify.com/embed/playlist/37i9dQZF1DXcBWIGoYBM5M" width="100%" height="80"></iframe>
     </div>
   </section>
 
+  <!-- CONTACT -->
   <section>
     <div class="card">
       <h2>Kontak 💌</h2>
