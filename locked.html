@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Coming Soon — DX Atelier</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;600&family=Kalam&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Baloo 2', cursive;
+      background: #fff;
+      color: #111;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      text-align: center;
+      overflow: hidden;
+    }
+
+    .box {
+      border: 2px dashed #000;
+      padding: 30px;
+      border-radius: 20px;
+      transform: rotate(-1deg);
+      max-width: 400px;
+    }
+
+    .box:hover {
+      transform: rotate(0deg) scale(1.03);
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 28px;
+    }
+
+    p {
+      margin-top: 15px;
+      line-height: 1.6;
+      opacity: 0.8;
+    }
+
+    .btn {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 8px 14px;
+      background: #000;
+      color: #fff;
+      border-radius: 10px;
+      text-decoration: none;
+      font-size: 14px;
+    }
+
+    .btn:hover {
+      background: #f9a8d4;
+      color: #000;
+    }
+
+    .doodle {
+      position: absolute;
+      font-family: 'Kalam', cursive;
+      font-size: 14px;
+      opacity: 0.6;
+    }
+
+    .d1 { top: 20px; left: 20px; }
+    .d2 { bottom: 20px; right: 20px; }
+
+    footer {
+      position: absolute;
+      bottom: 15px;
+      width: 100%;
+      text-align: center;
+      font-size: 12px;
+      opacity: 0.6;
+    }
+
+  </style>
+</head>
+
+<body>
+
+<div class="doodle d1">~ masih digambar ~</div>
+<div class="doodle d2">* almost there * ✨</div>
+
+<div class="box">
+  <h1>eh… belum jadi😆</h1>
+
+  <p>
+    halaman ini masih dalam versi demo.
+    <br><br>
+    detailnya masih aku kerjain biar lebih seru,
+    dan menarik...
+  </p>
+
+  <p>
+    balik lagi nanti ya!!!
+  </p>
+
+  <a class="btn" href="index.html">balik dulu</a>
+</div>
+
+<footer>
+  © <span id="year"></span> DX Atelier. All rights reserved.
+</footer>
+
+<script>
+  document.getElementById("year").innerText = new Date().getFullYear();
+</script>
+
+</body>
+</html>
