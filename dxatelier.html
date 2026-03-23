@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DX Archive</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;600&family=Kalam&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Baloo 2', cursive;
+      background: #fffdf7;
+      color: #111;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: auto;
+      padding: 40px 20px;
+    }
+
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      margin-bottom: 40px;
+    }
+
+    header img {
+      width: 45px;
+    }
+
+    .title {
+      font-size: 28px;
+    }
+
+    .tagline {
+      font-family: 'Kalam', cursive;
+      font-size: 13px;
+      opacity: 0.7;
+      text-align: center;
+      margin-top: 5px;
+    }
+
+    .hero {
+      text-align: center;
+      font-size: 26px;
+      margin-bottom: 40px;
+    }
+
+    .hero span {
+      background: #fde047;
+      padding: 4px 10px;
+      border-radius: 10px;
+    }
+
+    .books {
+      display: flex;
+      flex-direction: column;
+      gap: 25px;
+    }
+
+    .book {
+      border: 2px dashed #000;
+      padding: 20px;
+      border-radius: 20px;
+      background: #fff;
+      transition: 0.3s;
+      transform: rotate(-0.5deg);
+    }
+
+    .book:hover {
+      transform: rotate(0deg) scale(1.02);
+    }
+
+    .book h3 {
+      margin: 0;
+    }
+
+    .book p {
+      margin-top: 10px;
+      opacity: 0.8;
+    }
+
+    .btn {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 8px 12px;
+      background: #000;
+      color: #fff;
+      border-radius: 10px;
+      text-decoration: none;
+      font-size: 14px;
+    }
+
+    .btn:hover {
+      background: #f9a8d4;
+      color: #000;
+    }
+
+    .note {
+      margin-top: 60px;
+      font-family: 'Kalam', cursive;
+      text-align: center;
+      opacity: 0.6;
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 80px;
+      font-size: 12px;
+      opacity: 0.6;
+    }
+
+  </style>
+</head>
+
+<body>
+
+<div class="container">
+
+  <header>
+    <img src="dxlogo.png">
+    <div class="title">DX Archive 📚</div>
+  </header>
+
+  <div class="tagline">by DX Atelier</div>
+
+  <div class="hero">
+    ini bukan sekadar tulisan.<br>
+    <span>ini bagian dari perjalanan.</span>
+  </div>
+
+  <div class="books">
+
+    <div class="book">
+      <h3>RESET: Sebab, Kamu Layak Atas Versi Terbaikku</h3>
+      <p>
+        tentang perjalanan berubah, bukan karena orang lain… tapi karena diri sendiri.
+      </p>
+      <a class="btn" href="#">baca sekarang</a>
+    </div>
+
+  </div>
+
+  <div class="note">
+    ~ ditulis pelan-pelan, dibaca perlahan ~
+  </div>
+
+  <footer>
+    © <span id="year"></span> DX Atelier. All rights reserved.
+  </footer>
+
+</div>
+
+<script>
+  document.getElementById("year").innerText = new Date().getFullYear();
+</script>
+
+</body>
+</html>
