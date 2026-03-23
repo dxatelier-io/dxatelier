@@ -58,16 +58,74 @@ nav{
   margin-bottom:20px;
 }
 
-/* MOCKUP */
 .mockup{
   width:100%;
   max-width:700px;
   height:380px;
   margin:40px auto;
+
   background:var(--blue);
   border:4px solid black;
   box-shadow:8px 8px 0 black;
   border-radius:20px;
+
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+  padding:20px;
+
+  position:relative;
+  overflow:hidden;
+}
+
+/* ✨ TEXT UTAMA */
+.mockup h2{
+  color:white;
+  font-size:28px;
+  margin-bottom:10px;
+  animation: floatText 3s ease-in-out infinite;
+}
+
+.mockup p{
+  color:white;
+  font-size:14px;
+  opacity:0.9;
+}
+
+/* ✨ DOODLE CIRCLE FLOAT */
+.mockup::before,
+.mockup::after{
+  content:'';
+  position:absolute;
+  border:3px solid black;
+  border-radius:50%;
+  opacity:0.3;
+}
+
+.mockup::before{
+  width:80px;
+  height:80px;
+  background:var(--yellow);
+  top:20px;
+  left:20px;
+  animation: float 6s infinite ease-in-out;
+}
+
+.mockup::after{
+  width:60px;
+  height:60px;
+  background:var(--pink);
+  bottom:20px;
+  right:30px;
+  animation: float 5s infinite ease-in-out;
+}
+
+/* ✨ ANIMASI TEXT */
+@keyframes floatText{
+  0%,100%{transform:translateY(0);}
+  50%{transform:translateY(-8px);}
 }
 
 /* DESC */
@@ -116,7 +174,10 @@ footer{
   <div class="tag">UMKM Project</div>
   <h1>Playful Website for Local Brand</h1>
 
-  <div class="mockup"></div>
+ <div class="mockup">
+  <h2>Turning Small Brands<br>Into Big Experiences</h2>
+  <p>Website yang bukan cuma cantik, tapi juga menjual</p>
+</div>
 
   <div class="desc">
     <p>
