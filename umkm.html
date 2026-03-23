@@ -135,6 +135,69 @@ nav{
   line-height:1.8;
 }
 
+/* 🔥 PREVIEW WEBSITE */
+.preview{
+  max-width:700px;
+  margin:60px auto;
+  border:4px solid black;
+  box-shadow:8px 8px 0 black;
+  background:white;
+  border-radius:10px;
+  overflow:hidden;
+}
+
+/* browser bar */
+.browser-bar{
+  display:flex;
+  gap:8px;
+  padding:10px;
+  border-bottom:3px solid black;
+  background:#fff;
+}
+
+.browser-bar span{
+  width:12px;
+  height:12px;
+  border-radius:50%;
+  border:2px solid black;
+  background:var(--pink);
+}
+
+.browser-bar span:nth-child(2){background:var(--yellow);}
+.browser-bar span:nth-child(3){background:var(--green);}
+
+/* isi web */
+.web-content{
+  padding:20px;
+}
+
+/* fake navbar */
+.web-nav{
+  font-weight:700;
+  margin-bottom:20px;
+  border-bottom:2px dashed black;
+  padding-bottom:8px;
+}
+
+/* hero fake */
+.web-hero h2{
+  font-size:22px;
+  margin-bottom:10px;
+}
+
+.web-hero p{
+  font-size:14px;
+  margin-bottom:15px;
+}
+
+.web-hero button{
+  padding:8px 16px;
+  border:2px solid black;
+  background:var(--blue);
+  cursor:pointer;
+  box-shadow:3px 3px 0 black;
+}
+
 /* FEATURES */
 .features{
   margin-top:60px;
@@ -161,6 +224,26 @@ footer{
   padding:40px;
   text-align:center;
 }
+
+/* 📱 MOBILE */
+@media(max-width:768px){
+  .hero h1{
+    font-size:34px;
+  }
+
+  .mockup{
+    height:260px;
+  }
+
+  .preview{
+    margin:40px 10px;
+  }
+
+  .feature{
+    width:100%;
+    max-width:280px;
+  }
+}
 </style>
 </head>
 
@@ -174,7 +257,7 @@ footer{
   <div class="tag">UMKM Project</div>
   <h1>Playful Website for Local Brand</h1>
 
- <div class="mockup">
+  <div class="mockup">
   <h2>Turning Small Brands<br>Into Big Experiences</h2>
   <p>Website yang bukan cuma cantik, tapi juga menjual</p>
 </div>
@@ -184,6 +267,23 @@ footer{
       Website ini dirancang untuk membantu UMKM tampil lebih menarik secara digital.
       Dengan pendekatan visual yang playful dan engaging, brand menjadi lebih dekat dengan audiensnya.
     </p>
+  </div>
+
+  <!-- 🔥 PREVIEW WEBSITE -->
+  <div class="preview">
+    <div class="browser-bar">
+      <span></span><span></span><span></span>
+    </div>
+
+    <div class="web-content">
+      <div class="web-nav">KopiKita ☕</div>
+
+      <div class="web-hero">
+        <h2>Kopi Lokal, Rasa Global</h2>
+        <p>Nikmati kopi terbaik langsung dari petani Indonesia.</p>
+        <button>Beli Sekarang</button>
+      </div>
+    </div>
   </div>
 
   <div class="features">
