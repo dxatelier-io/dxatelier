@@ -1,0 +1,172 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'Inter',sans-serif;
+    background:#050505;
+    color:white;
+    min-height:100vh;
+    padding:40px;
+    overflow-x:hidden;
+}
+
+.background-glow{
+    position:fixed;
+
+    width:700px;
+    height:700px;
+
+    background:#1e5eff;
+
+    border-radius:50%;
+
+    filter:blur(250px);
+
+    opacity:.08;
+
+    top:50%;
+    left:50%;
+
+    transform:translate(-50%,-50%);
+}
+
+header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    position:relative;
+    z-index:2;
+}
+
+.brand{
+    display:flex;
+    align-items:center;
+    gap:16px;
+}
+
+.brand img{
+    width:48px;
+    height:48px;
+}
+
+.brand h1{
+    font-size:24px;
+}
+
+.brand p{
+    color:rgba(255,255,255,.5);
+    font-size:13px;
+}
+
+.clock-box{
+    text-align:right;
+}
+
+#clock{
+    font-size:28px;
+    font-weight:700;
+}
+
+#date{
+    color:rgba(255,255,255,.5);
+    margin-top:5px;
+}
+
+.hero{
+    margin-top:80px;
+    position:relative;
+    z-index:2;
+}
+
+.hero h2{
+    font-size:56px;
+    margin-bottom:15px;
+}
+
+.hero p{
+    color:rgba(255,255,255,.6);
+}
+
+.grid{
+    margin-top:60px;
+
+    display:grid;
+    grid-template-columns:
+    repeat(auto-fit,minmax(220px,1fr));
+
+    gap:20px;
+
+    position:relative;
+    z-index:2;
+}
+
+.card{
+    text-decoration:none;
+    color:white;
+
+    background:rgba(255,255,255,.04);
+
+    border:1px solid rgba(255,255,255,.08);
+
+    backdrop-filter:blur(20px);
+
+    border-radius:24px;
+
+    padding:24px;
+
+    transition:.3s ease;
+}
+
+.card:hover{
+    transform:translateY(-8px);
+
+    border-color:
+    rgba(30,94,255,.5);
+
+    box-shadow:
+    0 0 30px rgba(30,94,255,.15);
+}
+
+.card span{
+    color:#1e5eff;
+    font-size:14px;
+}
+
+.card h3{
+    margin-top:15px;
+    font-size:24px;
+}
+
+.card p{
+    margin-top:8px;
+    color:rgba(255,255,255,.5);
+}
+
+@media(max-width:768px){
+
+    body{
+        padding:24px;
+    }
+
+    header{
+        flex-direction:column;
+        gap:20px;
+    }
+
+    .clock-box{
+        text-align:center;
+    }
+
+    .hero{
+        margin-top:50px;
+    }
+
+    .hero h2{
+        font-size:40px;
+    }
+
+}
