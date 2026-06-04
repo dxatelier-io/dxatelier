@@ -69,6 +69,12 @@ body{
     transition:.4s;
 }
 
+.logo-box img{
+    width:80px;
+    height:80px;
+    object-fit:contain;
+}
+
 .app-icon:hover .logo-box{
     transform:translateY(-8px) scale(1.05);
 
