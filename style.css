@@ -1,0 +1,155 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'Inter',sans-serif;
+    background:#050505;
+    color:white;
+    overflow:hidden;
+    height:100vh;
+}
+
+.container{
+    width:100%;
+    height:100vh;
+
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+
+    position:relative;
+    z-index:2;
+}
+
+#clock{
+    position:absolute;
+    top:40px;
+
+    font-size:14px;
+    font-weight:500;
+    letter-spacing:2px;
+
+    color:rgba(255,255,255,.7);
+}
+
+.app-icon{
+    text-decoration:none;
+    color:white;
+
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+
+    transition:.4s;
+}
+
+.logo-box{
+    width:140px;
+    height:140px;
+
+    border-radius:35px;
+
+    background:rgba(255,255,255,.05);
+
+    backdrop-filter:blur(20px);
+
+    border:1px solid rgba(255,255,255,.1);
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    font-size:50px;
+    font-weight:700;
+
+    transition:.4s;
+}
+
+.app-icon:hover .logo-box{
+    transform:translateY(-8px) scale(1.05);
+
+    box-shadow:
+    0 0 40px rgba(255,255,255,.15);
+}
+
+h1{
+    margin-top:25px;
+    font-size:42px;
+    font-weight:700;
+}
+
+p{
+    margin-top:10px;
+    color:rgba(255,255,255,.6);
+    letter-spacing:1px;
+}
+
+span{
+    margin-top:25px;
+    font-size:14px;
+
+    color:rgba(255,255,255,.4);
+
+    animation:blink 2s infinite;
+}
+
+@keyframes blink{
+    50%{
+        opacity:.3;
+    }
+}
+
+.background-glow{
+    position:absolute;
+
+    width:500px;
+    height:500px;
+
+    background:white;
+
+    filter:blur(250px);
+
+    opacity:.05;
+
+    border-radius:50%;
+
+    top:50%;
+    left:50%;
+
+    transform:translate(-50%,-50%);
+
+    animation:float 8s ease-in-out infinite;
+}
+
+@keyframes float{
+
+    0%{
+        transform:translate(-50%,-50%);
+    }
+
+    50%{
+        transform:translate(-45%,-55%);
+    }
+
+    100%{
+        transform:translate(-50%,-50%);
+    }
+}
+
+@media(max-width:768px){
+
+    .logo-box{
+        width:120px;
+        height:120px;
+        font-size:42px;
+    }
+
+    h1{
+        font-size:34px;
+    }
+
+}
