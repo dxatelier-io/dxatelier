@@ -1,0 +1,191 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'Inter',sans-serif;
+    background:#050505;
+    color:white;
+    min-height:100vh;
+    padding:40px;
+    overflow-x:hidden;
+}
+
+/* GLOW */
+
+.background-glow{
+    position:fixed;
+
+    width:700px;
+    height:700px;
+
+    background:#1e5eff;
+
+    border-radius:50%;
+
+    filter:blur(250px);
+
+    opacity:.08;
+
+    top:50%;
+    left:50%;
+
+    transform:translate(-50%,-50%);
+}
+
+/* NAV */
+
+nav{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    position:relative;
+    z-index:2;
+}
+
+.back-btn{
+    color:white;
+    text-decoration:none;
+    opacity:.7;
+}
+
+#clock{
+    opacity:.7;
+}
+
+/* HERO */
+
+.hero{
+    margin-top:80px;
+
+    position:relative;
+    z-index:2;
+}
+
+.hero span{
+    color:#1e5eff;
+
+    letter-spacing:4px;
+
+    font-size:13px;
+
+    font-weight:600;
+}
+
+.hero h1{
+    margin-top:18px;
+
+    font-size:64px;
+
+    line-height:1.15;
+
+    max-width:900px;
+}
+
+.hero p{
+    margin-top:20px;
+
+    color:rgba(255,255,255,.55);
+
+    max-width:600px;
+
+    line-height:1.8;
+}
+
+/* BOOKSHELF */
+
+.bookshelf{
+    margin-top:80px;
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(auto-fit,minmax(320px,1fr));
+
+    gap:24px;
+
+    position:relative;
+    z-index:2;
+}
+
+.book-card{
+
+    text-decoration:none;
+
+    color:white;
+
+    padding:30px;
+
+    border-radius:28px;
+
+    background:
+    rgba(255,255,255,.04);
+
+    border:
+    1px solid rgba(255,255,255,.08);
+
+    backdrop-filter:blur(20px);
+
+    transition:.35s;
+}
+
+.book-card:hover{
+
+    transform:
+    translateY(-8px);
+
+    border-color:
+    rgba(30,94,255,.5);
+
+    box-shadow:
+    0 0 30px rgba(30,94,255,.15);
+}
+
+.book-number{
+
+    color:#1e5eff;
+
+    font-size:14px;
+
+    margin-bottom:25px;
+}
+
+.book-card h2{
+
+    font-size:32px;
+
+    line-height:1.2;
+}
+
+.meta{
+
+    margin-top:15px;
+
+    color:rgba(255,255,255,.5);
+}
+
+.read-link{
+
+    margin-top:40px;
+
+    color:#1e5eff;
+
+    font-weight:600;
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+    body{
+        padding:24px;
+    }
+
+    .hero h1{
+        font-size:42px;
+    }
+
+}
