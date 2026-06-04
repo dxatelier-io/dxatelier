@@ -14,14 +14,21 @@ body{
 
 .background-glow{
     position:fixed;
+
     width:700px;
     height:700px;
+
     background:#1e5eff;
+
     border-radius:50%;
+
     filter:blur(250px);
+
     opacity:.08;
+
     top:50%;
     left:50%;
+
     transform:translate(-50%,-50%);
 }
 
@@ -29,16 +36,31 @@ nav{
     display:flex;
     justify-content:space-between;
     align-items:center;
+
+    position:relative;
+    z-index:2;
 }
 
 .back-btn{
     text-decoration:none;
     color:white;
     opacity:.7;
+    transition:.3s;
+}
+
+.back-btn:hover{
+    opacity:1;
+}
+
+#clock{
+    opacity:.7;
+    letter-spacing:2px;
 }
 
 .hero{
     margin-top:80px;
+    position:relative;
+    z-index:2;
 }
 
 .hero span{
@@ -51,6 +73,7 @@ nav{
 .hero h1{
     margin-top:15px;
     font-size:64px;
+    line-height:1.1;
 }
 
 .hero p{
@@ -67,9 +90,12 @@ nav{
     display:grid;
 
     grid-template-columns:
-    repeat(auto-fit,minmax(280px,1fr));
+    repeat(auto-fit,minmax(300px,1fr));
 
     gap:25px;
+
+    position:relative;
+    z-index:2;
 }
 
 .group{
@@ -83,13 +109,24 @@ nav{
     padding:28px;
 
     backdrop-filter:blur(20px);
+
+    transition:.3s;
+}
+
+.group:hover{
+
+    border-color:rgba(30,94,255,.3);
+
+    transform:translateY(-4px);
 }
 
 .group h2{
 
+    color:#1e5eff;
+
     margin-bottom:20px;
 
-    color:#1e5eff;
+    font-size:24px;
 }
 
 .group a{
@@ -111,7 +148,37 @@ nav{
 
     opacity:1;
 
-    transform:translateX(6px);
+    transform:translateX(8px);
+}
+
+.group-description{
+
+    color:rgba(255,255,255,.6);
+
+    margin-bottom:20px;
+
+    line-height:1.8;
+}
+
+.group iframe{
+
+    border:none;
+
+    border-radius:18px;
+}
+
+.podcast-group{
+
+    grid-column:span 2;
+}
+
+@media(max-width:900px){
+
+    .podcast-group{
+
+        grid-column:span 1;
+    }
+
 }
 
 @media(max-width:768px){
@@ -122,6 +189,10 @@ nav{
 
     .hero h1{
         font-size:42px;
+    }
+
+    .group h2{
+        font-size:20px;
     }
 
 }
