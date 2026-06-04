@@ -1,0 +1,194 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'Inter',sans-serif;
+    background:#050505;
+    color:white;
+    min-height:100vh;
+    padding:40px;
+    overflow-x:hidden;
+    position:relative;
+}
+
+/* BACKGROUND */
+
+.background-glow{
+    position:fixed;
+
+    width:700px;
+    height:700px;
+
+    background:#1e5eff;
+
+    border-radius:50%;
+
+    filter:blur(250px);
+
+    opacity:.08;
+
+    top:50%;
+    left:50%;
+
+    transform:translate(-50%,-50%);
+}
+
+/* NAVBAR */
+
+nav{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    position:relative;
+    z-index:2;
+}
+
+.back-btn{
+    color:white;
+    text-decoration:none;
+    opacity:.7;
+
+    transition:.3s;
+}
+
+.back-btn:hover{
+    opacity:1;
+}
+
+#clock{
+    font-size:14px;
+    letter-spacing:2px;
+    opacity:.7;
+}
+
+/* MAIN */
+
+main{
+    max-width:1200px;
+
+    margin:60px auto;
+
+    display:grid;
+    grid-template-columns:300px 1fr;
+
+    gap:80px;
+
+    position:relative;
+    z-index:2;
+}
+
+/* PROFILE */
+
+.profile{
+    display:flex;
+    justify-content:center;
+    align-items:flex-start;
+}
+
+.profile img{
+    width:220px;
+    height:220px;
+
+    object-fit:contain;
+
+    filter:
+        drop-shadow(0 0 20px rgba(30,94,255,.35));
+}
+
+/* CONTENT */
+
+.section-tag{
+    color:#1e5eff;
+
+    letter-spacing:4px;
+
+    font-size:13px;
+
+    font-weight:600;
+}
+
+.content h1{
+    font-size:82px;
+
+    margin-top:10px;
+
+    line-height:1;
+}
+
+.content h2{
+    margin-top:12px;
+
+    font-weight:400;
+
+    color:rgba(255,255,255,.55);
+
+    margin-bottom:40px;
+}
+
+.content p{
+    font-size:18px;
+
+    line-height:1.9;
+
+    margin-bottom:24px;
+
+    color:rgba(255,255,255,.78);
+
+    max-width:700px;
+}
+
+.closing{
+    margin-top:50px;
+
+    font-size:22px;
+
+    font-weight:600;
+
+    line-height:1.7;
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+    body{
+        padding:24px;
+    }
+
+    main{
+
+        grid-template-columns:1fr;
+
+        gap:40px;
+
+        text-align:center;
+
+        margin-top:40px;
+    }
+
+    .profile img{
+
+        width:160px;
+        height:160px;
+    }
+
+    .content h1{
+
+        font-size:56px;
+    }
+
+    .content h2{
+
+        font-size:18px;
+    }
+
+    .content p{
+
+        font-size:16px;
+    }
+
+}
