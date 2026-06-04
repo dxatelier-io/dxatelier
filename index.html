@@ -1,278 +1,42 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>DX Atelier</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;600&display=swap" rel="stylesheet">
+<title>DX</title>
 
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Baloo 2', cursive;
-      background: #fff;
-      overflow-x: hidden;
-      color: #111;
-    }
+<link rel="stylesheet" href="style.css">
 
-    .container {
-      max-width: 900px;
-      margin: auto;
-      padding: 40px 20px;
-    }
-
-    header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    .brand {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-    }
-
-    .brand img {
-      width: 50px;
-    }
-
-    .tagline {
-      font-size: 12px;
-      opacity: 0.6;
-    }
-
-    /* HERO */
-    .hero {
-      margin-top: 40px;
-      font-size: 36px;
-      line-height: 1.3;
-    }
-
-    .hero span {
-      background: #fde047;
-      padding: 4px 10px;
-      border-radius: 10px;
-    }
-
-    .subhero {
-      margin-top: 10px;
-      font-size: 15px;
-      opacity: 0.8;
-      max-width: 500px;
-    }
-
-    section {
-      margin-top: 70px;
-      position: relative;
-    }
-
-    h2 {
-      font-size: 28px;
-      margin-bottom: 10px;
-    }
-
-    p {
-      line-height: 1.6;
-    }
-
-    /* doodle shapes */
-    .doodle {
-      position: absolute;
-      opacity: 0.5;
-      font-size: 20px;
-      animation: float 6s infinite ease-in-out;
-    }
-
-    .d1 { top: -20px; left: -20px; }
-    .d2 { bottom: -20px; right: -20px; }
-
-    @keyframes float {
-      0%,100% { transform: translateY(0); }
-      50% { transform: translateY(-12px); }
-    }
-
-    /* fun cards */
-    .card {
-      border: 2px dashed #000;
-      padding: 22px;
-      border-radius: 20px;
-      background: #fff;
-      transform: rotate(-0.5deg);
-      transition: 0.3s;
-    }
-
-    .card:hover {
-      transform: rotate(0deg) scale(1.03);
-    }
-
-    /* portfolio */
-    .portfolio {
-      display: flex;
-      flex-direction: column;
-      gap: 15px;
-    }
-
-    .project {
-      background: #f9f9f9;
-      padding: 15px;
-      border-radius: 15px;
-      border: 2px solid #000;
-      transition: 0.25s;
-      position: relative;
-    }
-
-    .project:hover {
-      background: #fff7ff;
-      transform: translateY(-5px) rotate(0.5deg);
-    }
-
-    .tag {
-      font-size: 11px;
-      background: #67e8f9;
-      padding: 3px 8px;
-      border-radius: 8px;
-      display: inline-block;
-      margin-bottom: 5px;
-    }
-
-    .btn {
-      display: inline-block;
-      margin-top: 10px;
-      padding: 8px 12px;
-      background: #000;
-      border-radius: 10px;
-      text-decoration: none;
-      color: #fff;
-      font-size: 14px;
-    }
-
-    .btn:hover {
-      background: #f9a8d4;
-      color: #000;
-    }
-
-    iframe {
-      border-radius: 10px;
-    }
-
-    footer {
-      text-align: center;
-      margin-top: 80px;
-      font-size: 12px;
-      opacity: 0.6;
-    }
-
-  </style>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
+<div class="background-glow"></div>
+
 <div class="container">
 
-  <header>
-    <div class="brand">
-      <img src="dxlogo.png">
-      <div>
-        <strong>DX Atelier</strong><br>
-        <span class="tagline">art in every pixel</span>
-      </div>
-    </div>
-  </header>
+    <div id="clock">00:00:00</div>
 
-  <!-- HERO -->
-  <div class="hero">
-    website kamu harusnya gak ngebosenin.<br>
-    <span>harus punya rasa.</span>
-  </div>
+    <a href="dashboard.html" class="app-icon">
 
-  <div class="subhero">
-    aku bantu brand kecil tampil beda lewat website yang seru, hidup, dan memorable.
-  </div>
-
-  <!-- ABOUT -->
-  <section>
-  <div class="doodle d1">🌈</div>
-  <div class="card">
-    <h2>Halo!!!</h2>
-    <p>
-      Aku kreator di balik DX Atelier.
-      <br><br>
-      Aku gak bikin website biasa.
-      <br>
-      Aku bikin website kamu BEDA!.
-    </p>
-
-    <a class="btn" href="about.html">Kenalan lebih jauh →</a>
-
-  </div>
-</section>
-
-  <!-- PORTFOLIO -->
-  <section>
-    <div class="doodle d2">✨</div>
-    <div class="card">
-      <h2>Portfolio 🎨</h2>
-      <div class="portfolio">
-
-        <div class="project">
-          <span class="tag">UMKM</span>
-          <p>Design fun & hangat</p>
-          <a class="btn" href="locked.html">Lihat project</a>
+        <div class="logo-box">
+    <img src="dxlogo.png" alt="DX Logo">
         </div>
 
-        <div class="project">
-          <span class="tag">Kreator</span>
-          <p>Playful & expressive</p>
-          <a class="btn" href="locked.html">Lihat project</a>
-        </div>
+        <h1>DX</h1>
 
-        <div class="project">
-          <span class="tag">Startup</span>
-          <p>Clean tapi tetap fun</p>
-          <a class="btn" href="locked.html">Lihat project</a>
-        </div>
+        <p>Code • Write • Speak</p>
 
-      </div>
-    </div>
-  </section>
+        <span>Tap to Enter</span>
 
-  <!-- ARCHIVE -->
-  <section>
-    <div class="card">
-      <h2>DX Archive 📚</h2>
-      <p>kumpulan buku & karya tulis yang bisa kamu nikmati 💛</p>
-      <a class="btn" href="dxatelier.html">Lihat karya</a>
-    </div>
-  </section>
-
-  <!-- PLAYLIST -->
-  <section>
-    <div class="card">
-      <h2>Playlist 🎧</h2>
-      <iframe src="https://open.spotify.com/embed/playlist/54IwwgLh0EXcCDsEzNJd5d?si=_jQODGmxTUqr4bC4UzNjzw&pi=Zi5tUTm4RgyDt" width="100%" height="80"></iframe>
-    </div>
-  </section>
-
-  <!-- CONTACT -->
-  <section>
-    <div class="card">
-      <h2>Kontak 💌</h2>
-      <p>Email: dxatelier.io@gmail.com</p>
-      <a class="btn" href="mailto:dxatelier.io@gmail.com">Ngobrol yuk</a>
-    </div>
-  </section>
-
-  <footer>
-    © <span id="year"></span> DX Atelier. All rights reserved.
-  </footer>
+    </a>
 
 </div>
 
-<script>
-  document.getElementById("year").innerText = new Date().getFullYear();
-</script>
+<script src="script.js"></script>
 
 </body>
 </html>
