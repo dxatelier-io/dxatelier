@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Gallery | DX</title>
+
+<link rel="stylesheet" href="gallery.css">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+<div class="background-glow"></div>
+
+<nav>
+
+    <a href="dashboard.html" class="back-btn">
+        ← Back
+    </a>
+
+    <div id="clock">00:00:00</div>
+
+</nav>
+
+<main>
+
+    <section class="hero">
+
+        <span>GALLERY</span>
+
+        <h1>
+            Captured moments.<br>
+            Saved for later.
+        </h1>
+
+        <p>
+            An archive of different versions of myself,
+            preserved through photographs.
+        </p>
+
+    </section>
+
+    <section class="archive">
+
+        <div class="year">
+            2025
+        </div>
+
+        <!-- ENTRY 001 -->
+
+        <div class="entry">
+
+            <div class="meta">
+
+                <div class="number">
+                    001
+                </div>
+
+                <h2>The Bald Era</h2>
+
+                <div class="date">
+                    May 2026
+                </div>
+
+                <p>
+                    A chapter of courage,
+                    change, and self-discovery.
+                </p>
+
+            </div>
+
+            <img src="bald1.jpg" alt="The Bald Era">
+
+        </div>
+
+        <!-- ENTRY 002 -->
+
+        <div class="entry">
+
+            <div class="meta">
+
+                <div class="number">
+                    002
+                </div>
+
+                <h2>The Bald Era II</h2>
+
+                <div class="date">
+                    June 2026
+                </div>
+
+                <p>
+                    Learning to become comfortable
+                    with being seen.
+                </p>
+
+            </div>
+
+            <img src="bald2.jpg" alt="The Bald Era II">
+
+        </div>
+
+        <!-- ENTRY 003 -->
+
+        <div class="entry">
+
+            <div class="meta">
+
+                <div class="number">
+                    003
+                </div>
+
+                <h2>The Bald Era III</h2>
+
+                <div class="date">
+                    June 2026
+                </div>
+
+                <p>
+                    Not a phase.
+                    A decision.
+                </p>
+
+            </div>
+
+            <img src="bald3.jpg" alt="The Bald Era III">
+
+        </div>
+
+    </section>
+
+    <section class="disclaimer">
+
+        <p>
+            These photographs are shared as part of a personal archive.
+            Please do not reproduce, redistribute, or reuse them without permission.
+        </p>
+
+    </section>
+
+</main>
+
+<div id="modal" class="modal">
+
+    <span id="closeBtn">&times;</span>
+
+    <div class="modal-wrapper">
+
+        <img id="modalImg">
+
+        <div class="watermark">
+            DX PERSONAL ARCHIVE • VIEW ONLY
+        </div>
+
+    </div>
+
+</div>
+
+<script src="gallery.js"></script>
+
+</body>
+</html>
